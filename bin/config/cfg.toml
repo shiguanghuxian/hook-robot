@@ -1,0 +1,20 @@
+debug = true
+
+[[robots]]
+type="script"
+target="workweixin"
+name="DemoNotification"
+spec="1 * * * * *"
+cfg="{\"cmd\":\"python\", \"path\":\"./workweixin.py\"}"
+webhook="" # 新建机器人提供的web hook地址
+
+[[robots]]
+type="script"
+target="dingtalk"
+name="DemoNotification1"
+spec="1 * * * * *"
+cfg="{\"cmd\":\"python\", \"path\":\"./dingtalk.py\"}"
+webhook="" # 新建机器人提供的web hook地址
+dingtalk_secret="" # 新建机器人提供的web hook SEC密钥
+ats=[] # 手机号列表
+at_all=true
