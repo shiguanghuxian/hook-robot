@@ -36,12 +36,11 @@ var (
 	Plugins map[string]Plugin
 )
 
-func init() {
-	Plugins = make(map[string]Plugin, 0)
-}
-
 // 注册插件
 func registerPlugin(name string, p Plugin) {
+	if Plugins == nil {
+		Plugins = make(map[string]Plugin, 0)
+	}
 	Plugins[name] = p
 }
 
